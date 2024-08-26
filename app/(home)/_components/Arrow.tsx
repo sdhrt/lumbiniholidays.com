@@ -3,9 +3,10 @@ import { ChevronsDown } from "lucide-react";
 import { useRef } from "react";
 
 export const Arrow = () => {
-  const targetRef = useRef<HTMLElement>(null);
+  const targetRef = useRef(null);
   const handleClick = () => {
     if (targetRef.current) {
+      // @ts-ignore
       targetRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
