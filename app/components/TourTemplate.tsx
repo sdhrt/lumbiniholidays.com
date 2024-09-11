@@ -1,3 +1,4 @@
+// This template is used across the website in order to show treks, tours and more.
 import {
   Accordion,
   AccordionItem,
@@ -22,7 +23,7 @@ import Image, { StaticImageData } from "next/image";
 import ContactForm from "@/app/components/ContactForm";
 
 interface ItineraryItem {
-  [key: string]: string;
+  [key: string]: string | undefined;
 }
 
 interface Service {
@@ -30,40 +31,31 @@ interface Service {
   excludes: string[];
 }
 
-interface TrekkingData {
+export interface Data {
   title: string;
   description: string;
-  altitude: number;
-  difficulty: string;
+  price?: number,
   days: number;
   itinerary: ItineraryItem[];
   details?: string[];
   service: Service;
 }
 
-export default function TrekkingTemplate({
+export default function TourTemplate({
   data,
   imgsrc,
 }: {
-  data: TrekkingData;
+  data: Data;
   imgsrc: StaticImageData;
 }) {
   return (
-    <div className="mt-20 mx-2 md:mx-14 lg:mx-32 mb-8">
+    <div className="mt-4 md:mt-20 mx-2 md:mx-14 lg:mx-32 mb-8">
       <div className="flex flex-col md:flex-row justify-between">
         <div className="flex flex-col gap-4 *:justify-center *:md:justify-normal">
           <h1 className="text-2xl lg:text-3xl font-bold tracking-wide flex">
             {data.title}
           </h1>
           <div className="flex gap-2 md:gap-8 *:flex *:items-center *:gap-1">
-            <span>
-              <Mountain className="text-blue-500" />
-              {data.altitude} m.
-            </span>
-            <span>
-              <HeartPulse className="text-red-500" />
-              {data.difficulty}
-            </span>
             <span>
               <Clock className="text-green-600" />
               {data.days} days
@@ -75,7 +67,7 @@ export default function TrekkingTemplate({
         </span>
       </div>
 
-      <div className="mt-4 lg:mt-8 flex justify-center">
+      <div className="mt-4 lg:mt-8 max-h-[60vh] flex justify-center">
         <Image
           src={imgsrc}
           alt={data.title}

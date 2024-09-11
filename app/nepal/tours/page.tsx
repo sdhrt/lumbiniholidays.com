@@ -2,10 +2,11 @@ import React from "react";
 import { Link } from "next-view-transitions";
 import Image, { StaticImageData } from "next/image";
 
-import ChitlangImage from "@/public/images/chitlang.jpg";
-import KalinchowkImage from "@/public/images/kalinchowk.jpg";
-import NepalImage from "@/public/images/boudhanath.webp";
-import MuktinathImage from "@/public/images/muktinath.jpg";
+import ChitlangImage from "@/public/images/nepal/tours/chitlang.jpg";
+import KalinchowkImage from "@/public/images/nepal/tours/kalinchowk.jpg";
+import NepalImage from "@/public/images/nepal/boudhanath.jpg";
+import LumbiniImage from "@/public/images/nepal/tours/lumbini.jpg";
+import MuktinathImage from "@/public/images/nepal/tours/muktinath.jpg";
 import { ArrowUpRight, BadgeDollarSign, Clock } from "lucide-react";
 
 export default function TourPage() {
@@ -27,6 +28,7 @@ export default function TourPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 place-items-center my-10 gap-8 animate-up">
         <TourCard title="Chitlang" imgsrc={ChitlangImage} days={2} price={40} />
         <TourCard title="Nepal" imgsrc={NepalImage} days={11} />
+        <TourCard title="Lumbini" imgsrc={LumbiniImage} days={5} />
         <TourCard
           title="Muktinath"
           imgsrc={MuktinathImage}
@@ -53,7 +55,7 @@ const TourCard = ({
   title: string;
   imgsrc: StaticImageData;
   days: number;
-  price: number;
+  price?: number;
 }) => {
   return (
     <div className="flex flex-col w-fit rounded-md shadow-md hover:shadow-lg max-w-60 hover:translate-y-[-0.5rem] transition-all hover:ease-out hover:cursor-default hover:duration-200">

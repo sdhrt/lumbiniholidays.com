@@ -1,9 +1,9 @@
 import { Link } from "next-view-transitions";
 import Image from "next/image";
-import NATTAlogo from "@/public/registered/NATTA.png";
-import IATA from "@/public/registered/IATA.jpg";
-import PATA from "@/public/registered/PATA.png";
-import NTB from "@/public/registered/NTB.jpg";
+import NATTAlogo from "@/public/images/registered/NATTA.png";
+import IATA from "@/public/images/registered/IATA.jpg";
+import PATA from "@/public/images/registered/PATA.png";
+import NTB from "@/public/images/registered/NTB.jpg";
 
 export default function Register() {
   return (

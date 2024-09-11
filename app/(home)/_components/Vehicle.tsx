@@ -1,8 +1,10 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
 import React from "react";
-import hiaceImage from "@/public/images/vehicle/hiace.jpeg";
-import jomsomBusImage from "@/public/images/vehicle/jomsombus.jpg";
-import delhiBusImage from "@/public/images/vehicle/delhibus.jpeg";
+import hiaceImage from "@/public/images/nepal/vehicle/hiace.jpeg";
+import jomsomBusImage from "@/public/images/nepal/vehicle/jomsombus.jpg";
+import delhiBusImage from "@/public/images/nepal/vehicle/delhibus.jpeg";
+import { motion } from "framer-motion";
 
 export default function Vehicle() {
   return (
@@ -43,7 +45,21 @@ const VehicleCard = ({
   description: string;
 }) => {
   return (
-    <div className="flex flex-col gap-4 w-80 lg:w-[25%] justify-between rounded-md border hover:shadow-lg transition-all hover:translate-y-[-0.5rem]">
+    <motion.div
+      initial={{
+        opacity: 0,
+        y: 50,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 0.75,
+        },
+      }}
+      viewport={{ once: true }}
+      className="flex flex-col gap-4 max-w-[300px] justify-between rounded-md border hover:shadow-lg transition-all hover:translate-y-[-0.5rem]"
+    >
       <Image
         src={src}
         alt={name}
@@ -51,9 +67,9 @@ const VehicleCard = ({
         className="w-full h-[200px] rounded-md"
       />
       <h1 className="texl-xl font-semibold px-4">{name}</h1>
-      <p className="text-sm tracking-tighter text-muted-foreground px-4 pb-2 leading-4 md:leading-normal hover:cursor-default">
+      <p className="text-sm text-muted-foreground px-4 pb-2 leading-4 md:leading-normal hover:cursor-default">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 };

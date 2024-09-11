@@ -4,21 +4,21 @@
 
 - Landing
 - Nepal
-  - Trekking \* 10
-  - Tour \* 5
-  - Safari \* 2
-  - Rafting \* 5
-  - Day Trips \* 2
+  - Trekking
+  - Tour
+  - Safari
+  - Rafting
+  - Day Trips
 - Tibet
-  - Trekking \* 6
-  - Package \* 2
+  - Trekking
+  - Package
 - Bhutan
-  - Trekking \* 6
-  - Package \* 2
+  - Trekking
+  - Package
 - India
-  - Package \* 1
+  - Package
 - International
-  - Tour \* 3
+  - Tour
 - Misc
   - Company Profile
   - Our Team

@@ -1,16 +1,14 @@
-"use client";
-
 import { Link } from "next-view-transitions";
 
-import annapurna_circuit from "@/public/images/trekking/annapurna_circuit.jpg";
-import everest_base_camp from "@/public/images/trekking/everest_base_camp.jpg";
-import gokyo_ebc from "@/public/images/trekking/gokyo_ebc.jpg";
-import gokyo_chola from "@/public/images/trekking/gokyo_chola.jpg";
-import tashi_lapcha from "@/public/images/trekking/tashi_lapcha.jpeg";
-import jiri_everest from "@/public/images/trekking/jiri_everest.jpg";
-import langtang_valley from "@/public/images/trekking/langtang_valley.jpg";
-import langtang_gosainkunda from "@/public/images/trekking/langtang_gosaikunda.jpg";
-import helambu_trek from "@/public/images/trekking/helambu_trek.jpg";
+import annapurna_circuit from "@/public/images/nepal/trekking/annapurna_circuit.jpg";
+import everest_base_camp from "@/public/images/nepal/trekking/everest_base_camp.jpg";
+import gokyo_ebc from "@/public/images/nepal/trekking/gokyo_ebc.jpg";
+import gokyo_chola from "@/public/images/nepal/trekking/gokyo_chola.jpg";
+import tashi_lapcha from "@/public/images/nepal/trekking/tashi_lapcha.jpeg";
+import jiri_everest from "@/public/images/nepal/trekking/jiri_everest.jpg";
+import langtang_valley from "@/public/images/nepal/trekking/langtang_valley.jpg";
+import langtang_gosainkunda from "@/public/images/nepal/trekking/langtang_gosaikunda.jpg";
+import helambu_trek from "@/public/images/nepal/trekking/helambu_trek.jpg";
 import Image, { StaticImageData } from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
@@ -31,7 +29,7 @@ export default function TrekkingPage() {
             }}
           />
         </div>
-        <span className="translate-y-[-200px] flex justify-center items-center h-full text-4xl lg:text-[4rem] font-bold text-white hover:cursor-default">
+        <span className="translate-y-[-400px] flex justify-center items-center h-full text-4xl lg:text-[4rem] font-bold text-white hover:cursor-default">
           Trekking in Nepal
         </span>
       </div>

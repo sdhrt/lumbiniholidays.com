@@ -21,7 +21,7 @@ function NepalPage() {
             }}
           />
         </div>
-        <span className="translate-y-[-200px] flex justify-center items-center h-full text-4xl lg:text-[4rem] font-bold text-white hover:stroke-black hover:cursor-default">
+        <span className="translate-y-[-400px] flex justify-center items-center h-full text-4xl lg:text-[4rem] font-bold text-white hover:stroke-black hover:cursor-default">
           Nepal
         </span>
       </div>

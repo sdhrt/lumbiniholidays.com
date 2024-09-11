@@ -1,8 +1,10 @@
+"use client";
 import { Link } from "next-view-transitions";
 import Image, { StaticImageData } from "next/image";
-import annapurna_circuit_image from "@/public/images/trekking/annapurna_circuit.jpg";
-import everest_base_camp_image from "@/public/images/trekking/everest_base_camp.jpg";
-import chitlang_tour_image from "@/public/images/chitlang.jpg";
+import annapurna_circuit_image from "@/public/images/nepal/trekking/annapurna_circuit.jpg";
+import everest_base_camp_image from "@/public/images/nepal/trekking/everest_base_camp.jpg";
+import chitlang_tour_image from "@/public/images/nepal/tours/chitlang.jpg";
+import { motion } from "framer-motion";
 
 export const Spotlight = () => {
   return (
@@ -10,7 +12,7 @@ export const Spotlight = () => {
       <h2 className="font-bold text-2xl md:text-3xl tracking-tight text-neutral-900 flex justify-center">
         Lumbini Holidays Spotlight
       </h2>
-      <div className="text-sm tracking-tighter text-muted-foreground mx-4">
+      <div className="text-sm tracking-tighter text-muted-foreground mx-4 flex justify-center">
         Discover the latest adventures at Lumbini Holidays! Stay ahead with
         fresh travel news, exclusive deals, and special offers that make your
         next journey unforgettable. Don't miss out on what's happening in the
@@ -52,19 +54,33 @@ export const SpotlightCard = ({
   url: string;
 }) => {
   return (
-    <Link
-      href={url}
-      className="flex flex-col gap-4 w-80 lg:w-[25%] rounded-md border hover:shadow-lg hover:cursor-pointer transition-all hover:translate-y-[-0.5rem]"
-    >
-      <Image
-        src={image}
-        alt={title}
-        className="w-[100%] h-[200px] rounded-md"
-      />
-      <h1 className="texl-xl font-semibold px-4">{title}</h1>
-      <p className="text-sm tracking-tighter text-muted-foreground px-4 pb-2 leading-4 md:leading-normal">
-        {description}
-      </p>
+    <Link href={url}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 50,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            type: "spring",
+            duration: 0.75,
+          },
+        }}
+        viewport={{ once: true }}
+        className="flex flex-col gap-4 max-w-[300px] rounded-md border hover:shadow-lg hover:cursor-pointer transition-all hover:translate-y-[-0.5rem]"
+      >
+        <Image
+          src={image}
+          alt={title}
+          className="w-[100%] h-[200px] rounded-md"
+        />
+        <h1 className="texl-xl font-semibold px-4">{title}</h1>
+        <p className="text-sm text-muted-foreground px-4 pb-2 leading-4 md:leading-normal">
+          {description}
+        </p>
+      </motion.div>
     </Link>
   );
 };

@@ -6,6 +6,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
+  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { Link } from "next-view-transitions";
@@ -14,10 +15,10 @@ import React from "react";
 const destinations = [
   {
     name: "nepal",
-    activity: ["trekking", "tours", "safari", "rafting", "package"],
+    activity: ["trekking", "tours", "safari", "rafting"],
   },
-  { name: "india", activity: ["package"] },
-  { name: "tibet", activity: ["trekking", "package"] },
+  { name: "international", activity: ["india", "bhutan"] },
+  { name: "company", activity: ["about us", "our team", "why with us?"] },
 ];
 
 function NavMenu() {
@@ -28,18 +29,18 @@ function NavMenu() {
           <NavigationMenuItem key={index}>
             <NavigationMenuTrigger>
               <Link href={`/${country.name}`}>
-                <span className="text-sm">{country.name.toUpperCase()}</span>
+                <span className="capitalize">{country.name}</span>
               </Link>
             </NavigationMenuTrigger>
             <NavigationMenuContent>
-              <ul className="grid w-[300px] gap-3 p-2 md:grid-cols-1">
+              <ul className="grid w-[350px] gap-1 p-2">
                 {country.activity.map((activity, index) => (
                   <Link
-                    href={`/${country.name}/${activity}`}
+                    href={`/${country.name}/${activity.replace(/\s+/g, "_")}`}
                     className="capitalize w-full h-full"
                     key={index}
                   >
-                    <ListItem title={activity} />{" "}
+                    <ListItem title={`${activity}`} />{" "}
                   </Link>
                 ))}
               </ul>
@@ -47,6 +48,10 @@ function NavMenu() {
           </NavigationMenuItem>
         ))}
       </NavigationMenuList>
+
+      <div className="perspective-[2000px] absolute top-full left-0 flex w-full justify-center">
+        <NavigationMenuViewport className="data-[state=open]:animate-scaleIn data-[state=closed]:animate-scaleOut relative mt-[10px] h-[var(--radix-navigation-menu-viewport-height)] w-full origin-[top_center] overflow-hidden rounded-[6px] bg-white transition-[width,_height] duration-300 sm:w-[var(--radix-navigation-menu-viewport-width)]" />
+      </div>
     </NavigationMenu>
   );
 }
@@ -61,7 +66,7 @@ const ListItem = React.forwardRef<
         <span
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "flex justify-center select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className,
           )}
           {...props}

@@ -7,6 +7,7 @@ import { ViewTransitions } from "next-view-transitions";
 import Nav from "./components/Nav";
 import Footer from "./(home)/_components/Footer";
 import Head from "next/head";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,6 +18,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: ["Tours", "Travesls", "Holidays", "Nepal"],
+  other: {
+    "google-site-verification": "8awNV2yCQ5JzkpIRBROpRn3WccqvAKDWf3Gr1f0Yu3g",
+  },
   authors: [
     {
       name: "Siddhartha Shrestha",
@@ -27,6 +31,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteConfig.url,
     title: siteConfig.name,
+    images: "/og-image.png",
     description: siteConfig.description,
     siteName: siteConfig.name,
   },
@@ -55,11 +60,12 @@ export default function RootLayout({
             inter.className)
           }
         >
-          <div className="flex flex-col">
+          <div className="flex flex-col justify-between h-screen">
             <Nav />
             {children}
             <Footer />
           </div>
+          <Toaster />
         </body>
       </ViewTransitions>
     </html>
