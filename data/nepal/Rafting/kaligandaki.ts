@@ -1,4 +1,4 @@
-import { Data } from "@/app/components/SafariTemplate";
+import { Data } from "@/app/_components/Template";
 
 export const kaligandaki_data: Data = {
   title: "Kali Gandaki River Rafting",

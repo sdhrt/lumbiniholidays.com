@@ -1,4 +1,4 @@
-import { Data } from "@/app/components/TourTemplate";
+import { Data } from "@/app/_components/Template";
 
 export const chitang_tour_data: Data = {
   title: "Chitlang Tour",
@@ -8,12 +8,10 @@ export const chitang_tour_data: Data = {
 Chitlang is the newari village located in the Makawanpur district. Chitlang serves to be the most prefered destination for hiking from Kathmandu. It is the home of more than 100 species of bird and goat cheese is the most popular of the village.  `,
   itinerary: [
     {
-      "1":
-        "Drive to Chitlang, pickup from collection point, 3-hour journey from Kathmandu, arrival and accommodation in tent or room, welcome snacks, campfire, music, and dinner at the resort.",
+      "1": "Drive to Chitlang, pickup from collection point, 3-hour journey from Kathmandu, arrival and accommodation in tent or room, welcome snacks, campfire, music, and dinner at the resort.",
     },
     {
-      "2":
-        "Explore Chitlang, early morning wakeup, breakfast at resort, village sightseeing, lunch at resort, checkout, drive to Malekhu, boating, return to Kathmandu, drop at the original pickup location.",
+      "2": "Explore Chitlang, early morning wakeup, breakfast at resort, village sightseeing, lunch at resort, checkout, drive to Malekhu, boating, return to Kathmandu, drop at the original pickup location.",
     },
   ],
   service: {

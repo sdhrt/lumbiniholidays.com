@@ -4,7 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { ViewTransitions } from "next-view-transitions";
-import Nav from "./components/Nav";
+import Nav from "./_components/Nav";
 import Footer from "./(home)/_components/Footer";
 import Head from "next/head";
 import { Toaster } from "@/components/ui/toaster";
@@ -30,8 +30,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
+    images: "/images/header_logo.png",
     title: siteConfig.name,
-    images: "/og-image.png",
     description: siteConfig.description,
     siteName: siteConfig.name,
   },

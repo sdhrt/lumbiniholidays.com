@@ -1,4 +1,4 @@
-import { Data } from "@/app/components/SafariTemplate";
+import { Data } from "@/app/_components/Template";
 
 export const shuklaphanta_data: Data = {
   title: "Shuklaphanta National Park Safari",

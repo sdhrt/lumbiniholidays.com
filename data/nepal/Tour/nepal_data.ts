@@ -1,4 +1,4 @@
-import { Data } from "@/app/components/TourTemplate";
+import { Data } from "@/app/_components/Template";
 
 export const nepal_tour_data: Data = {
   title: "Nepal Tour",

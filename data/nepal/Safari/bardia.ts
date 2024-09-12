@@ -1,4 +1,4 @@
-import { Data } from "@/app/components/SafariTemplate";
+import { Data } from "@/app/_components/Template";
 
 export const bardia_data: Data = {
   title: "Bardia National Park Safari",

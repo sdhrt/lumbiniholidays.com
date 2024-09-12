@@ -1,4 +1,4 @@
-import { Data } from "@/app/components/SafariTemplate";
+import { Data } from "@/app/_components/Template";
 
 export const bhotekoshi_rafting_data: Data = {
   title: "Bhote Koshi River Rafting",

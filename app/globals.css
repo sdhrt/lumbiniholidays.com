@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.clipped {
-  clip-path: url(#heroClip);
-}
-
 @layer base {
   :root {
     --background: 0 0% 100%;

@@ -26,6 +26,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       priority: 0.5,
     })),
+    ...company.map((companyDetails) => ({
+      url: `${siteConfig.url}/company/${companyDetails}`,
+      lastModified: new Date(),
+      priority: 0.5,
+    })),
   ];
 }
 
@@ -42,3 +47,4 @@ const nepalTrekking = [
   "langtang_valley",
   "tashi_lapcha_pass",
 ];
+const company = ["", "about_us", "our_team", "why_with_us"];

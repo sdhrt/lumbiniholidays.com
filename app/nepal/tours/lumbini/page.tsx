@@ -1,15 +1,15 @@
 import { Metadata } from "next";
 import lumbini_image from "@/public/images/nepal/tours/lumbini.jpg";
 import { lumbini_tour_data as data } from "@/data/nepal/Tour/lumbini_data";
-import TourTemplate from "@/app/components/TourTemplate";
+import Template from "@/app/_components/Template";
 
 // data object contains details about the trek and is at the bottom
 
 export default function page() {
-  return <TourTemplate data={data} imgsrc={lumbini_image} />;
+  return <Template data={data} imgsrc={lumbini_image} />;
 }
 
 export const metadata: Metadata = {
   title: data.title,
-  description: data.description,
+  description: data.description.slice(0,150),
 };

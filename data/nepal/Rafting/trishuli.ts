@@ -1,4 +1,4 @@
-import { Data } from "@/app/components/SafariTemplate";
+import { Data } from "@/app/_components/Template";
 
 export const trisuli_rafting_data: Data = {
   title: "Trisuli River Rafting",
