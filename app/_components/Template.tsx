@@ -6,13 +6,6 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import {
-  Table,
-  TableBody,
-  TableCaption,
-  TableCell,
-  TableRow,
-} from "@/components/ui/table";
-import {
   BadgeDollarSignIcon,
   CircleCheck,
   CircleSlash,
@@ -22,8 +15,9 @@ import {
 } from "lucide-react";
 import Image, { StaticImageData } from "next/image";
 import ContactForm from "@/app/_components/ContactForm";
+import Itinerary from "./Itinerary";
 
-interface ItineraryItem {
+export interface ItineraryItem {
   [key: string]: string | undefined;
 }
 
@@ -109,32 +103,7 @@ export default function Template({
         </Accordion>
       </div>
 
-      {data.itinerary && (
-        <div className="mt-4 md:mt-10">
-          <h2 className="text-xl lg:text-2xl font-semibold tracking-tight py-2">
-            Itinerary
-          </h2>
-          <Table>
-            <TableCaption>Itinerary of {data.title}</TableCaption>
-            <TableBody>
-              {data.itinerary.map((day, index) => {
-                const [dayNumber, dayDesc] = Object.entries(day)[0];
-                return (
-                  <TableRow
-                    key={index}
-                    className="h-14 border-t-gray-400 border-t"
-                  >
-                    <TableCell className="whitespace-nowrap font-semibold">
-                      {`• Day ${dayNumber}`}
-                    </TableCell>
-                    <TableCell className="">{dayDesc}</TableCell>
-                  </TableRow>
-                );
-              })}
-            </TableBody>
-          </Table>
-        </div>
-      )}
+      {data.itinerary && <Itinerary itineraryData={data} />}
 
       {data.service && (
         <div className="mt-4 lg:mt-14 text-sm *:mt-4">
