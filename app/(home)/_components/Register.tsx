@@ -15,8 +15,15 @@ export default function Register() {
         <Link href="https://ntb.gov.np/" target="_blank">
           <Image src={NTB} alt="NTB" className="w-20 h-20 object-contain" />
         </Link>
-        <Link href="https://natta.org.np/" target="_blank">
-          <Image src={NATTAlogo} alt="NATTA" className="w-20 h-20 object-contain" />
+        <Link
+          href="https://natta.org.np/member/lumbini-holidays-tours-travels-pvt-ltd/"
+          target="_blank"
+        >
+          <Image
+            src={NATTAlogo}
+            alt="NATTA"
+            className="w-20 h-20 object-contain"
+          />
         </Link>
         <Link href="https://www.iata.org/" target="_blank">
           <Image src={IATA} alt="IATA" className="w-20 h-20 object-contain" />

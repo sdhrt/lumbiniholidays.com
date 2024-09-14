@@ -116,7 +116,7 @@ export default function Template({
             </span>
             <ul className="mt-2">
               {data.service.includes.map((include, index) => (
-                <li key={index} className="flex gap-2 h-12 md:h-8">
+                <li key={index} className="flex gap-2">
                   <CircleCheck className="text-green-600" />
                   <span className="w-80 md:w-max">{include}</span>
                 </li>
@@ -129,7 +129,7 @@ export default function Template({
             </span>
             <ul className="mt-2">
               {data.service.excludes.map((exclude, index) => (
-                <li key={index} className="flex gap-2 h-12 md:h-8">
+                <li key={index} className="flex gap-2">
                   <CircleSlash className="text-red-500" />
                   <span className="w-80 md:w-max">{exclude}</span>
                 </li>
